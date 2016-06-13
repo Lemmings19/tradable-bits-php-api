@@ -3,7 +3,7 @@
 - A [Tradable Bits](http://tradablebits.com/) API written in PHP.
 - **The OAuth functionality has not been tested.**<sup>1</sup>
 - This API was adapted from the [Instagram-PHP-API](https://github.com/cosenary/Instagram-PHP-API).
-- If you'd like to add to this repo<sup>1</sup>, a good place to start would be adding more methods near `getStreamMedia()` and `getStatus()`. Those methods hit TBit's API, but there are a whole bunch of other endpoints that you could make methods for.
+- If you'd like to add to this repo<sup>1</sup>, a good place to start would be adding more functions near `getStreamMedia()` and `getStatus()`. Those functions hit TBit's API, but there are a whole bunch of other endpoints that you could make functions for.
 - Instagram cut off access to their API from the public so I started using Tradable Bits as a workaround (you can get to your Instagram feed via TBits).
 - Tradable Bits offers the ability to consolidate multiple social media feeds into one managable feed (or 'stream'). They offer a [RESTful API](http://tradablebits.com/developers) for their service, this code interfaces with that API.
 - The author of this code has no affiliation with Tradable Bits.
@@ -18,7 +18,7 @@ Here is some sample code for using the library:
  * @var array    $images    An array intended to hold image data.
  * @var string   $streamKey The TBits stream key to pull from.
  *
- * @return array $images The image arrage with the Tradable bits data merged
+ * @return array $images The image array with the Tradable bits data merged
  *                       into it.
  */
 function getTradableBitsData($images, $streamKey = null)
