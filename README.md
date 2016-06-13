@@ -13,7 +13,7 @@
 Here is some sample code for using the library:
 ```php
 /**
- * Gets all Tradable Bits stream data and merges it into an image array.
+ * Gets Tradable Bits stream data and merges it into an image array.
  *
  * @var array    $images    An array intended to hold image data.
  * @var string   $streamKey The TBits stream key to pull from.
@@ -37,7 +37,7 @@ function getTradableBitsData($images, $streamKey = null)
 		'apiKey' => 'your_key_here',
 		'apiSecret' => 'your_secret_here',
 		'apiCallback' => 'your_api_callback_here',
-		'accountId' => 'your_account_id_here,
+		'accountId' => 'your_account_id_here',
 		'streamKey' => $streamKey
 		)
 	);
