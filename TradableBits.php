@@ -3,7 +3,7 @@
 /**
  * Allows for connection to Tradable Bits service.
  *
- * This class was adopted from: https://github.com/cosenary/Instagram-PHP-API
+ * This class was adapted from: https://github.com/cosenary/Instagram-PHP-API
  *
  * API Documentation: http://tradablebits.com/developers
  * 
@@ -108,14 +108,18 @@ class TradableBits {
     }
 
     /**
-     * Get a stream's recent media.
+     * Get a stream's recent media. Can only set maxTimeKey OR minTimeKey. Not both.
+     * 
+     * Docs: http://tradablebits.com/developers#api-stream (/api/v1/streams/[ STREAM_KEY ]/records)
      *
-     * @param int    $limit     Limit of returned results
-     * @param string $streamKey The stream's key
+     * @param int    $maxTimeKey Maximum age of media to fetch.
+     * @param int    $minTimeKey Minimum age of media to fetch.
+     * @param int    $limit      Maximum number of results to return.
+     * @param string $streamKey  The stream's key
      *
      * @return mixed
      */
-    public function getStreamMedia($streamKey = null, $maxTimeKey = null, $minTimeKey = null, $limit = self::MEDIA_LIMIT_DEFAULT)
+    public function getStreamMedia($maxTimeKey = null, $minTimeKey = null, $limit = self::MEDIA_LIMIT_DEFAULT, $streamKey = null)
     {
         $params = array();
 
@@ -141,9 +145,8 @@ class TradableBits {
 
     /**
      * Get an account's status.
-     *
-     * @param string $streamKey The stream's key
-     * @param int    $limit  Limit of returned results
+     * 
+     * Docs: http://tradablebits.com/developers#api-misc (/api/v1/status)
      *
      * @return mixed
      */
