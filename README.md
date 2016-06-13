@@ -1,12 +1,14 @@
 # tradable-bits-php-api
 
 - A [Tradable Bits](http://tradablebits.com/) API written in PHP.
-- **The OAuth functionality has not been tested.**
+- **The OAuth functionality has not been tested.**<sup>1</sup>
 - This API was adapted from the [Instagram-PHP-API](https://github.com/cosenary/Instagram-PHP-API).
-- If you'd like to add to this repo (as of the initial commit), a good place to start would be adding more methods near `getStreamMedia()` and `getStatus()`. Those methods hit TBit's API, but there are a whole bunch of other endpoints that you could make methods for.
+- If you'd like to add to this repo<sup>1</sup>, a good place to start would be adding more methods near `getStreamMedia()` and `getStatus()`. Those methods hit TBit's API, but there are a whole bunch of other endpoints that you could make methods for.
 - Instagram cut off access to their API from the public so I started using Tradable Bits as a workaround (you can get to your Instagram feed via TBits).
 - Tradable Bits offers the ability to consolidate multiple social media feeds into one managable feed (or 'stream'). They offer a [RESTful API](http://tradablebits.com/developers) for their service, this code interfaces with that API.
 - The author of this code has no affiliation with Tradable Bits.
+
+<sup>1</sup> As of initial commit.
 
 Here is some sample code for using the library:
 ```php
