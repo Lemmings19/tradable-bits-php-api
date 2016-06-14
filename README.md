@@ -12,6 +12,8 @@
 
 Here is some sample code for using the library:
 ```php
+include 'TradableBits.php';
+
 /**
  * Gets Tradable Bits stream data and merges it into an image array.
  *
@@ -32,7 +34,6 @@ function getTradableBitsData($images, $streamKey = null)
 		$streamKey = 'your_stream_key_here';
 	}
 
-	App::uses('TradableBits', 'Lib/TradableBits');
 	$tradableBits = new TradableBits(array(
 		'apiKey' => 'your_key_here',
 		'apiSecret' => 'your_secret_here',
